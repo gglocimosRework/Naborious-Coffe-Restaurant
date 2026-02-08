@@ -19,18 +19,23 @@
 
         <nav>
             <ul>
-                
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="menu.html">Menu</a></li>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
+                  <li class="about-path"><a href="#about">About Us</a></li>
+                  <div class="menu-toggle" 
+                  onclick="toggleMenu()">☰
+                  </div>
                 
             </ul>
         </nav>
     </header>
 
+    <div class="mobile-menu" id="mobileMenu">
+     <a href="#featured-coffees">Coffees</a>
+     <a href="#canadian-sweets">Canadian Sweets</a>
+     <a href="#other-sweets">Other Sweets</a>
+    </div>
+
     <main>
-        <section class="hero">
+        <section class="hero" id="featured-coffees">
             <p class="hero-name"> Delicious flavors await you!</p>
         </section>
 
@@ -94,10 +99,11 @@
            
        </section>
 
-      <section class="featured">
-         <h3>Featured Canadian Sweets</h3>
+      <section class="featured-canada-sweets-container" id="featured-canada-sweets">
+        <div class="featured-canada-sweets">
+         <h3>Featured <span class="canadian-sweets">Canadian Sweets</span></h3>
 
-         <div class="coffe-grid">
+          <div class="sweet-grid">
             <div class="sweet-item">
                 <img src="./images/butter-tarts.png" alt="Butter Tarts" loading="lazy">
                 <h4>Butter Tart</h4>
@@ -122,17 +128,68 @@
                 <p>A sweet syrup made from the sap of maple trees, 
                     often used as a topping for pancakes, waffles, and other breakfast foods.</p>
             </div>
+          </div>
          </div>
+        </section>
+
+
+        <section class="featured-others-sweets" id="featured-others-sweets">
+          <h3>Other featured Sweets</h3>
+            <div class="others-sweets-grid">
+                <div class="other-sweet-item">
+                    <img src="./images/muffins.jpg" alt="Muffins" loading="lazy">
+                    <h4>Muffins</h4>
+
+                    <p>A quick bread baked in small cups 
+                        made with ingredients like flour, sugar, eggs, 
+                        and butter.</p>
+                </div>
+
+                <div class="other-sweet-item">
+                    <img src="./images/brownies-pie.jpg" alt="Brownies Pie" loading="lazy">
+                    <h4>Brownies Pie</h4>
+
+                    <p>A traditional United States dessert made with a rich, fudgy brownie base, 
+                        often topped with a sweet sauce or whipped cream.</p>
+                </div>
+
+                <div class="other-sweet-item">
+                    <img src="./images/waffles.jpg" alt="Waffles" loading="lazy">
+                    <h4>Waffles</h4>
+
+                    <p>A delicious and smooth mass made from a batter of flour, sugar, eggs, and butter, 
+                        cooked in a waffle iron to create a crispy, golden-brown treat.</p>
+                </div>
+            </div>
         </section>
     </main>
 
-        <footer>
-            <h3 class="about-us">About Us</h3>
-            <p>Naborious Coffee is dedicated place on Canada to providing the highest quality 
-                coffee experience
-                and cultural canadian sweets. 
-                We source our beans from sustainable farms around the world and roast
-            </p>
-        </footer>
+   <section class="about-section" id="about">
+        <h3 class="about-us">About Us</h3>
+        <p> 
+            Naborious Coffee is dedicated place on Canada to providing the highest quality 
+            coffee experience and cultural canadian sweets. 
+            We source our beans from sustainable farms around the world and roast
+        </p>
+
+        <h3>Contact Us</h3>
+        <p>
+            Email: info@naboriouscoffee.com
+        </p>
+        <p>
+            Phone: +1 (555) 123-4567
+        </p>
+        <p>
+            Address: 183 Coffee Street, Quebec, Montreal, Canada
+        </p>
+    </section>
+
+
+  <footer class="footer">
+        <p>&copy; 2024 Naborious Coffee. All rights reserved.</p>
+  </footer>
+
+
+        <script src="Naborious-coffee.js"></script>
  </body>                
 </html>
