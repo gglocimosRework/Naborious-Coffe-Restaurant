@@ -9,7 +9,7 @@ This project is a work-in-progress and will be updated with new features and sec
 - Modern hover effects on items
 - Mobile-friendly layout
 
-! How to view
+## How to view
 1. Clone the repository:
 ```bash
 git clone https://github.com/gglocimosRework/Naborious-Coffee.git
