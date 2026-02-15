@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naborious Coffee</title>
-    <link rel="stylesheet" href="Naborious-coffee.css">
+
+    <link rel="stylesheet" href="./css/general.css"> 
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/featured.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+
 </head>
 <body>
     <header>
@@ -20,26 +25,39 @@
         <nav>
             <ul>
                   <li class="about-path"><a href="#about">About Us</a></li>
-                  <div class="menu-toggle" 
-                  onclick="toggleMenu()">☰
-                  </div>
-                
+
+                <div id="menu-wrapper"> 
+                    <div class="menu-toggle" 
+                    onclick="toggleMenu()">☰
+                    </div>
+                    
+
+                    <div class="mobile-menu" id="mobileMenu">
+                        <a href="#" class="return-text-menu">Return</a>
+
+                        <a href="#featured-coffees" class="scroll-link" 
+                        data-target="featured-coffees">Coffees</a>
+
+                        <a href="#canadian-sweets" class="scroll-link" 
+                        data-target="canadian-sweets">Canadian Sweets</a>
+
+                        <a href="#other-sweets" class="scroll-link" 
+                        data-target="other-sweets">Other Sweets</a>
+
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>
 
-    <div class="mobile-menu" id="mobileMenu">
-     <a href="#featured-coffees">Coffees</a>
-     <a href="#canadian-sweets">Canadian Sweets</a>
-     <a href="#other-sweets">Other Sweets</a>
-    </div>
-
+    
+     
     <main>
-        <section class="hero" id="featured-coffees">
+        <section class="hero">
             <p class="hero-name"> Delicious flavors await you!</p>
         </section>
 
-      <section class="featured">
+      <section class="featured"  id="featured-coffees">
             <h3>Featured Coffees</h3>
 
         <div class="coffe-grid"> 
@@ -99,9 +117,9 @@
            
        </section>
 
-      <section class="featured-canada-sweets-container" id="featured-canada-sweets">
+      <section class="featured-canada-sweets-container" id="canadian-sweets">
         <div class="featured-canada-sweets">
-         <h3>Featured <span class="canadian-sweets">Canadian Sweets</span></h3>
+         <h3>Featured Canadian Sweets 🍁</h3>
 
           <div class="sweet-grid">
             <div class="sweet-item">
@@ -133,7 +151,7 @@
         </section>
 
 
-        <section class="featured-others-sweets" id="featured-others-sweets">
+        <section class="featured-others-sweets" id="other-sweets">
           <h3>Other featured Sweets</h3>
             <div class="others-sweets-grid">
                 <div class="other-sweet-item">
@@ -190,6 +208,6 @@
   </footer>
 
 
-        <script src="Naborious-coffee.js"></script>
+        <script src="./js/Naborious-coffee.js"></script>
  </body>                
 </html>

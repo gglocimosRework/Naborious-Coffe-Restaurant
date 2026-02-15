@@ -1,0 +1,130 @@
+header {
+    background-color: #ff7a1a;
+    padding: 20px 1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand h1, .brand img {
+    user-select: none;   
+    cursor: default;
+}
+
+.brand img {
+    width: 100px;
+    height: 85px;
+    object-fit: contain;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 650;
+    transition: 0.3s;
+    padding: 8px 15px; 
+    border-radius: 7.5px;
+
+    position: relative;
+}
+
+nav a:hover {
+    background-color: #e96b10;
+    color: white;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #e96b10; 
+    border-radius: 8px;
+    z-index: -1; 
+    transition: width 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: white;
+    transition: 0.8s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#menu-wrapper {
+    position: relative;
+}
+
+.about-path, .menu-toggle {
+    font-weight: 500;
+}
+
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 220px;
+    background: #e96b10;
+    border-radius: 12px;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 100
+}
+
+.mobile-menu.active {
+    right: 20px;
+}
+
+.mobile-menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
