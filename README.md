@@ -17,7 +17,7 @@ git clone https://github.com/gglocimosRework/Naborious-Coffee.git
 
 ### Future updates
 
-Add JavaScript for hamburger menu and interactive features
+Add JavaScript for products
 
 Include Google Maps for location
 
