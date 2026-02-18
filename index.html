@@ -49,7 +49,6 @@
             </ul>
         </nav>
     </header>
-
     
      
     <main>
@@ -57,20 +56,43 @@
             <p class="hero-name"> Delicious flavors await you!</p>
         </section>
 
+        <div class="overlay" id="overlay"></div>
+          <container class="product-modal" id="productModal">
+            
+                <button class="close-modal" id="closeModal">✕</button>
+                <img id="modalImage" src="" alt="">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <span id="modalPrice"></span>
+                <button class="buy-btn">Buy</button>
+        
+          </container>
+        
+
+
       <section class="featured"  id="featured-coffees">
             <h3>Featured Coffees</h3>
 
         <div class="coffe-grid"> 
-            <div class="coffee-item">
+            <div class="coffee-item product-card" 
+            data-title="Espresso" 
+            data-description="Strong and aromatic Italian coffee."
+            data-price="$3.50"
+            data-image="./images/espresso.jpg">
+
                 <img src="./images/espresso.jpg" alt="Espresso" loading="lazy">
                 <h4>Espresso</h4>
 
                 <p>A strong and bold coffee made by forcing hot 
                     water through finely-ground coffee beans.</p>
-            </div>
+        </div>
 
-            <div class="coffee-item">
-
+            <div class="coffee-item product-card"
+                data-title="Latte" 
+                data-description="Unique and decent creamy coffe."
+                data-price="$3.50"
+                data-image="./images/latte.jpg">
+            
                 <img src="./images/latte.jpg" alt="Latte" loading="lazy">
                 <h4>Latte</h4>
 
@@ -78,7 +100,12 @@
                     topped with a small amount of foam.
                 </p>
             </div>
-            <div class="coffee-item">
+            <div class="coffee-item product-card"
+                data-title="Cappucino" 
+                data-description="Special in the hearts of countless people"
+                data-price="$6.00"
+                data-image="./images/cappucino.jpg">
+
                 <img src="./images/cappucino.jpg" alt="Cappucino" loading="lazy">
                 <h4>Cappucino</h4>
 
@@ -86,7 +113,11 @@
                     topped with a layer of foam.</p>
             </div>
             
-            <div class="coffee-item">
+            <div class="coffee-item product-card"
+                data-title="Milkshake" 
+                data-description="Delicious creamy milk"
+                data-price="$5.50"
+                data-image="./images/milkshake.jpg">
 
                 <img src="./images/milkshake.jpg" alt="Milkshake" loading="lazy">
                 <h4>Milkshake</h4>
@@ -95,7 +126,11 @@
                     often served in a tall glass.</p>
             </div>
 
-            <div class="coffee-item">
+            <div class="coffee-item product-card"
+                data-title="Macchiato" 
+                data-description="Exotic but delicious coffee with a shot of espresso"
+                data-price="$5.50"
+                data-image="./images/macchiato.jpg">
 
                 <img src="./images/macchiato.jpg" alt="Macchiato" loading="lazy">
                 <h4>Macchiato</h4>
@@ -104,7 +139,11 @@
                     often served in a small cup.</p>
             </div>
 
-             <div class="coffee-item">
+             <div class="coffee-item product-card"
+                data-title="ChaiLatte" 
+                data-description="Fabulous coffee made with a tea and milk"
+                data-price="$6.50"
+                data-image="./images/chai-latte.jpg">
 
                 <img src="./images/chai-latte.jpg" alt="Chai Latte" loading="lazy">
                 <h4>Chai Latte</h4>
@@ -122,7 +161,12 @@
          <h3>Featured Canadian Sweets 🍁</h3>
 
           <div class="sweet-grid">
-            <div class="sweet-item">
+            <div class="sweet-item product-card" 
+                data-title="ButterTart" 
+                data-description="healthy and classic canadian dessert made"
+                data-price="$7.00"
+                data-image="./images/butter-tarts.png">
+            
                 <img src="./images/butter-tarts.png" alt="Butter Tarts" loading="lazy">
                 <h4>Butter Tart</h4>
 
@@ -130,7 +174,12 @@
                     a sweet and gooey mixture of butter, sugar, and eggs.</p>
             </div>
 
-            <div class="sweet-item">
+            <div class="sweet-item product-card"
+                data-title="NanaimoBar" 
+                data-description="Wonderful sweet split in bars"
+                data-price="$2.50"
+                data-image="./images/nanaimo-bars.webp">
+            
                     <img src="./images/nanaimo-bars.webp" alt="Nanaimo Bars" loading="lazy">
                     <h4>Nanaimo Bar</h4>
 
@@ -139,7 +188,12 @@
                         and a chocolate topping.</p>
             </div> 
 
-            <div class="sweet-item">
+            <div class="sweet-item product-card"
+                data-title="MapleSyrup" 
+                data-description="Most known complement to use with breakfast foods"
+                data-price="$5.00"
+                data-image="./images/maple-syrup.jpg">
+            
                 <img src="./images/maple-syrup.jpg" alt="Maple Syrup" loading="lazy">
                 <h4>Maple Syrup</h4>
     
@@ -147,14 +201,19 @@
                     often used as a topping for pancakes, waffles, and other breakfast foods.</p>
             </div>
           </div>
-         </div>
-        </section>
+        </div>
+      </section>
 
 
         <section class="featured-others-sweets" id="other-sweets">
           <h3>Other featured Sweets</h3>
             <div class="others-sweets-grid">
-                <div class="other-sweet-item">
+                <div class="other-sweet-item product-card"
+                    data-title="Muffins" 
+                    data-description="a simple small cake but still delicious by choice"
+                    data-price="$1.50"
+                    data-image="./images/muffins.jpg">
+                
                     <img src="./images/muffins.jpg" alt="Muffins" loading="lazy">
                     <h4>Muffins</h4>
 
@@ -163,7 +222,12 @@
                         and butter.</p>
                 </div>
 
-                <div class="other-sweet-item">
+                <div class="other-sweet-item product-card"
+                    data-title="BrowniesPie" 
+                    data-description="a traditional pie from United States"
+                    data-price="$4.50"
+                    data-image="./images/brownies-pie.jpg">
+                
                     <img src="./images/brownies-pie.jpg" alt="Brownies Pie" loading="lazy">
                     <h4>Brownies Pie</h4>
 
@@ -171,7 +235,12 @@
                         often topped with a sweet sauce or whipped cream.</p>
                 </div>
 
-                <div class="other-sweet-item">
+                <div class="other-sweet-item product-card"
+                    data-title="Waffles" 
+                    data-description="the smoothest food in our restaurant"
+                    data-price="$6.50"
+                    data-image="./images/waffles.jpg">
+                
                     <img src="./images/waffles.jpg" alt="Waffles" loading="lazy">
                     <h4>Waffles</h4>
 

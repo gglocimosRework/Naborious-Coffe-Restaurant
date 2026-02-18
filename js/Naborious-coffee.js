@@ -2,7 +2,15 @@ const menuWrapper = document.querySelector('.menu-wrapper');
 const links = document.querySelectorAll('.scroll-link');
 const menu = document.getElementById("mobileMenu");
 
+const cards = document.querySelectorAll('.product-card');
+const modal = document.getElementById('productModal');
+const overlay = document.getElementById('overlay');
 
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const modalPrice = document.getElementById('modalPrice');
+const closeModal = document.getElementById('closeModal');
 
 
 links.forEach(link => {
@@ -30,4 +38,32 @@ if (window.innerWidth - e.clientX <= triggerDistance) {
 } else if (e.clientX < window.innerWidth - menu.offsetWidth) {
         menu.classList.remove('active');
     }
+});
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    modalImage.src = card.dataset.image;
+    modalTitle.textContent = card.dataset.title;
+    modalDescription.textContent = card.dataset.description;
+    modalPrice.textContent = card.dataset.price;
+
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeProductModal() {
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+overlay.addEventListener('click', closeProductModal);
+closeModal.addEventListener('click', closeProductModal);
+
+document.querySelectorAll('.buy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    alert('Ordering system coming soon!');
+  });
 });

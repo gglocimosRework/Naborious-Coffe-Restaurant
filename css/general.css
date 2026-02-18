@@ -75,3 +75,90 @@ footer {
 footer p {
     color: white;
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+.product-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: min(90%, 420px);
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.product-modal img {
+  width: 70%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.product-modal h2 {
+  margin-bottom: 8px;
+}
+
+.product-modal span {
+  display: block;
+  margin-top: 12px;
+  font-weight: 700;
+  color: #e96b10;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.overlay.active,
+.product-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.buy-btn {
+  margin-top: 20px;
+  padding: 12px 110px;
+  background-color: #e96b10;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, 0.2s ease;
+}
+
+.buy-btn:hover {
+  background-color: #c85b0e;
+  transform: translateY(-2px);
+}
+
+.buy-btn:active {
+    background-color: #9b480c;
+}
