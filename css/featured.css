@@ -4,7 +4,8 @@
 }
 
 .featured-canada-sweets-container {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--slightly-black-color);
+    border-radius: 12px; 
     padding-bottom: 30px;
 }
 
@@ -14,7 +15,7 @@
 }
 
 .featured-canada-sweets h4 {
-    color: #333;
+    color: var(--black-color);
 }
 
 .coffe-grid, .sweet-grid, .others-sweets-grid {
@@ -26,17 +27,16 @@
 }
 
 .coffee-item, .sweet-item, .other-sweet-item {
-    background: rgb(230, 180, 124);
+    background: var(--light-beige-color);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px var(--slightly-black-color);
     margin-bottom: 30px;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     transition: 0.3s;
-
-   cursor: pointer;
+    cursor: pointer;
 }
 
 .coffee-item:hover, .sweet-item:hover, .other-sweet-item:hover {

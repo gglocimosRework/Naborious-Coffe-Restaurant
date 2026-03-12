@@ -16,14 +16,17 @@
 <body>
     <header>
         <div class="brand"> 
-
-          <img src="./images/logo.jpeg" alt="Naborious Coffee Logo" class="logo">
+          <img id="logo" src="./images/logo.jpeg" alt="Naborious Coffee Logo" class="logo">
           <h1>Naborious Coffee</h1>
 
         </div>
 
         <nav>
-                 <a href="#about">About Us</a>
+                 
+                 <button id="theme-switch">
+                 <img src="./images/dark_mode.png" alt="Dark Mode">
+                 <img src="./images/light_mode.png" alt="Light Mode">
+                 </button>
 
             <div id="menu-wrapper"> 
                 <div class="menu-toggle" 
@@ -43,6 +46,7 @@
                     <a href="#other-sweets" class="scroll-link" 
                     data-target="other-sweets">Other Sweets</a>
 
+                    <a href="#about" class="scroll-link" data-target="about">About Us</a>
                 </div>
             </div>
         </nav>
@@ -257,7 +261,7 @@
             We source our beans from sustainable farms around the world and roast
         </p>
 
-        <h3>Contact Us</h3>
+        <h3 class="about-us">Contact Us</h3>
         <p>
             Email: info@naboriouscoffee.com
         </p>

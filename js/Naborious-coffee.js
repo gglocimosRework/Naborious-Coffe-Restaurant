@@ -67,3 +67,55 @@ document.querySelectorAll('.buy-btn').forEach(btn => {
     alert('Ordering system coming soon!');
   });
 });
+
+let darkmode = localStorage.getItem('darkmode') === 'true';
+const themeSwitch = document.getElementById('theme-switch');
+
+const enableDarkmode = () => {
+  document.body.classList.add('darkmode');
+  localStorage.setItem('darkmode', 'true');
+}
+
+const disableDarkmode = () => {
+  document.body.classList.remove('darkmode');
+  localStorage.setItem('darkmode', 'false');
+}
+
+updateTheme();
+
+function updateTheme() {
+  
+  if (darkmode) {
+    enableDarkmode()
+   } else {
+    disableDarkmode()
+   }
+  }
+
+  themeSwitch.addEventListener('click', () => {
+    darkmode = !darkmode;
+    updateTheme();
+    updateLogo();
+
+  if (darkmode) {
+    enableDarkmode();
+  } else {
+    disableDarkmode();
+  }
+  });
+
+  const logoBrand = document.getElementById('logo');
+
+  const lightLogoSrc = './images/logo.jpeg';
+
+  const darkLogoSrc = './images/logo-dark.jpeg';
+
+  function updateLogo() {
+    if (document.body.classList.contains('darkmode')) {
+      logoBrand.src = darkLogoSrc;
+    } else {
+      logoBrand.src = lightLogoSrc;
+    }
+  }
+
+  updateLogo();
